@@ -26,7 +26,7 @@ def max_profit(stock_prices):
         if pot_profit > max_profit:
             max_profit = pot_profit
 
-    return max_profit
+    return max_profit ,min_price, price
 
-
-print(max_profit([9, 11, 8, 5, 7, 10]))
+profit, buy_price, sell_price = max_profit([9, 11, 8, 5, 7, 10])
+print("Profit of ",profit, " available when buying at ",buy_price, " and selling at ",sell_price)
