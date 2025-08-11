@@ -6,13 +6,13 @@ palindrome. Do not convert the integer into a string.
 
 def palindrome_check(n):
     if n < 0:
-        return False
+        return False     #negative number cannot be palindrome 
+
     rev, temp = 0, n
     while temp:
-        rev = rev * 10 + temp % 10
-        temp //= 10
+        rev = rev * 10 + temp % 10    # add last digit from temp to rev 
+        temp //= 10                   # now remove from temp 
     return n == rev
-
 
 #Testing 
 print(palindrome_check(121))  
